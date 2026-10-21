@@ -1,2 +1,74 @@
-text
-index.
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkySplit</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <button class="icon" id="menuBtn" aria-label="Меню">☰</button>
+  <h1 class="logo">SkySplit</h1>
+  <button class="icon" id="bell" aria-label="Уведомления">🔔<i id="badge">1</i></button>
+</header>
+<nav class="nav">
+  <button data-go="search" class="on"><b>🔍</b>Search</button>
+  <button data-go="results"><b>✈️</b>Trips</button>
+  <button data-go="group"><b>👥</b>Group</button>
+  <button data-go="pay"><b>💳</b>Payment</button>
+  <button data-go="profile"><b>👤</b>Profile</button>
+</nav>
+<main>
+  <section id="search" class="screen on">
+    <h2>Where to?</h2>
+    <div class="row">
+      <input id="from" class="fld" value="MSQ Minsk" aria-label="Откуда">
+      <button id="swap" class="icon" aria-label="Поменять местами">⇅</button>
+      <input id="to" class="fld" value="TBS Tbilisi" aria-label="Куда">
+    </div>
+    <label class="dash">Date <input type="date" id="date" value="2026-09-24"></label>
+    <h3>Dates, September 2026</h3>
+    <div id="days" class="days"></div>
+    <h3>Who's coming?</h3>
+    <div id="who" class="who"></div>
+    <button id="find" class="btn">Search flights</button>
+  </section>
+
+  <section id="results" class="screen">
+    <h2>Search results</h2>
+    <div class="bar"><b id="meta"></b><button id="edit" class="mini">Edit search</button></div>
+    <div class="bar"><span id="chip" class="chip"></span><button id="sort" class="mini"></button></div>
+    <div id="flights" class="cards"></div>
+  </section>
+
+  <section id="group" class="screen">
+    <h2>Group</h2>
+    <div id="glist" class="card"></div>
+  </section>
+
+  <section id="pay" class="screen">
+    <h2>Payments</h2>
+    <div id="timer" class="timer">23:59:00</div>
+    <div id="pflight" class="card"></div>
+    <div class="card sum"><span>Total for group</span><b id="tot"></b></div>
+    <div class="card sum"><span>Your payment</span><b id="my"></b></div>
+    <div id="members" class="card"></div>
+    <button id="payBtn" class="btn"></button>
+    <p class="m c">🔒 Secure payment</p>
+  </section>
+
+  <section id="profile" class="screen">
+    <h2>Profile</h2>
+    <div class="card">
+      <p>👤 You</p>
+      <p>Booked trips: <b id="booked">0</b></p>
+      <button id="theme" class="mini">🌙 Dark theme</button>
+    </div>
+  </section>
+</main>
+<footer>© 2026 SkySplit · Лабораторная работа №3</footer>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

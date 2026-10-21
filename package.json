@@ -1,0 +1,14 @@
+{
+  "name": "adaptive-app",
+  "version": "1.0.0",
+  "description": "SkySplit — адаптивный прототип приложения (ЛР №3)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node cow.js",
+    "serve": "node server.js"
+  },
+  "dependencies": {
+    "cowsay": "^1.6.0"
+  },
+  "license": "ISC"
+}
